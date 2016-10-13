@@ -3,6 +3,6 @@ version: '1.0'
 steps:
     build-step:
       type: build
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.codefresh
       image-name: sreekanthrajan/linesmash
       tag: ${{CF_BRANCH}}
