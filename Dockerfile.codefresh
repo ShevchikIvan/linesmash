@@ -14,6 +14,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # Install Maven, wget
 RUN apt-get -y install maven wget
+RUN pwd
 
 COPY . /app
 WORKDIR /app
@@ -22,6 +23,6 @@ RUN ls -l
 RUN mvn install -DskipTests=true
 RUN ls -l
 RUN ls -l target/
-COPY target/linesmash-0.0.1-SNAPSHOT.war  /app/bin/
+
 RUN ls -la /app/bin/
-ENTRYPOINT java -jar /app/bin/linesmash-0.0.1-SNAPSHOT.war
+ENTRYPOINT java -jar /app/target/linesmash-0.0.1-SNAPSHOT.war
