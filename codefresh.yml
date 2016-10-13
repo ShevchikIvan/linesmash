@@ -9,8 +9,4 @@ steps:
     push-to-dockerhub:
       type: push
       candidate: ${{build-step}}
-      tag: ${{CF_BRANCH}}
-    credentials: 
-      username: ${{username}}
-      password: ${{password}}
-    fail-fast: false
+      tag: latest
