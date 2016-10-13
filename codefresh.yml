@@ -8,7 +8,7 @@ steps:
       tag: ${{CF_BRANCH}}
     push-to-dockerhub:
       type: push
-      candidate: ${{build-step-name}}
+      candidate: ${{build-step}}
       tag: ${{CF_BRANCH}}
     credentials: 
       username: ${{username}}
