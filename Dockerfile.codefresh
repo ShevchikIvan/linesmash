@@ -20,6 +20,7 @@ WORKDIR /app
 
 RUN ls -l
 RUN mvn install -DskipTests=true
+RUN ls -l /target
 COPY target/linesmash-0.0.1-SNAPSHOT.war  /app/bin/
 RUN ls -la /app/bin/
 ENTRYPOINT java -jar /app/bin/linesmash-0.0.1-SNAPSHOT.war
