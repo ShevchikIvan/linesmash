@@ -6,3 +6,11 @@ steps:
       dockerfile: Dockerfile.codefresh
       image-name: sreekanthrajan/linesmash
       tag: ${{CF_BRANCH}}
+    push-to-dockerhub:
+      type: push
+      candidate: ${{build-step-name}}
+      tag: ${{CF_BRANCH}}
+    credentials: 
+      username: ${{username}}
+      password: ${{password}}
+    fail-fast: false
