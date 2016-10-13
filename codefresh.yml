@@ -4,7 +4,7 @@ steps:
     build-step:
       type: build
       dockerfile: Dockerfile.codefresh
-      image-name: sreekanthrajan/linesmash
+      image-name: shevchikivan/linesmash
       tag: ${{CF_BRANCH}}
     push-to-dockerhub:
       type: push
