@@ -9,4 +9,4 @@ steps:
     push-to-dockerhub:
       type: push
       candidate: ${{build-step}}
-      tag: latest
+      tag: ${{CF_BRANCH}}
