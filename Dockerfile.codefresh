@@ -22,7 +22,8 @@ WORKDIR /app
 RUN ls -l
 RUN mvn install -DskipTests=true
 RUN ls -l
+RUN mkdir -p /opt/tomcat/webapps/
 RUN ls -l target/
 RUN cp /app/target/linesmash-0.0.1-SNAPSHOT.war /opt/tomcat/webapps/
 
-ENTRYPOINT java -jar /app/target/linesmash-0.0.1-SNAPSHOT.war
+#ENTRYPOINT java -jar /app/target/linesmash-0.0.1-SNAPSHOT.war
